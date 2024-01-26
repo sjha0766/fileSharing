@@ -6,6 +6,7 @@ const connectDB=require('./config/db');
 const ejs = require('ejs');
 
 const app=express();
+const cors=require('cors');
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -18,6 +19,11 @@ app.use('/files/download',downloadRouter);
 const PORT = process.env.PORT || 3000;
 
 connectDB();
+
+const corsOptions={
+origin:process.env.ALLOWED_CLIENTS.split(",")
+}
+app.use(cors(corsOptions));
 
 app.listen(PORT,()=>{
     console.log(`Listing at port ${PORT}`);
