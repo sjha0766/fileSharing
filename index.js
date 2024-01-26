@@ -20,10 +20,10 @@ const PORT = process.env.PORT || 3000;
 
 connectDB();
 
-const corsOptions={
-origin:process.env.ALLOWED_CLIENTS.split(",")
-}
-app.use(cors(corsOptions));
+// const corsOptions={
+// origin:process.env.ALLOWED_CLIENTS.split(",")
+// }
+// app.use(cors(corsOptions));
 
 app.listen(PORT,()=>{
     console.log(`Listing at port ${PORT}`);
