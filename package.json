@@ -2,11 +2,15 @@
   "name": "file_sharing_app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "serve": "node server.js"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
+
+  "engines": {
+    "node": ">=14"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,4 +29,5 @@
   "devDependencies": {
     "nodemon": "^3.0.2"
   }
+  
 }
