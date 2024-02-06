@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// Get the connection string from your MongoDB Atlas dashboard
-const MONGO_URI = process.env.MONGO_CONNECTION_URL;
+
+
 
 // Connect to MongoDB
 function connectDB(){
@@ -12,7 +12,7 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true,
 });
 
-// Get the default connection
+
 const connection = mongoose.connection;
 
 // Event listeners for database connection
